@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>db体育 · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f7f8fa;
+            font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #1e2a3a;
+            line-height: 1.7;
+            padding: 0 1.5rem;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2.5rem 0 3.5rem;
+        }
+
+        /* hero 区 */
+        .hero {
+            text-align: center;
+            padding: 4rem 0 2.8rem;
+            border-bottom: 1px solid #e4e8ee;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0f1a2c;
+        }
+        .hero .sub {
+            margin-top: 0.9rem;
+            font-size: 1.05rem;
+            color: #586577;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 公共标题与段落 */
+        section {
+            margin: 2.8rem 0;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1.1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #dce2ec;
+            color: #142133;
+        }
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.6rem;
+            color: #203349;
+        }
+        p, li {
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+        .text-sm {
+            font-size: 0.95rem;
+            color: #4a5a72;
+        }
+
+        /* 卡片列表 —— 优势区、说明区 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            margin: 1.5rem 0;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.2rem 1.6rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 20, 40, 0.04);
+            border: 1px solid #eef1f6;
+        }
+        .card strong {
+            color: #1b3a5e;
+            display: inline-block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* 提醒 / 提示块 */
+        .notice-box {
+            background: #edf2f9;
+            border-left: 4px solid #2b5797;
+            border-radius: 0 10px 10px 0;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0;
+        }
+        .notice-box p {
+            margin-bottom: 0.3rem;
+        }
+
+        /* FAQ 摘要 */
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #d9dfe9;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            color: #1b334d;
+            margin-bottom: 0.2rem;
+        }
+        .faq-a {
+            font-size: 0.95rem;
+            color: #3f536b;
+        }
+
+        /* 底部 */
+        .footer-links {
+            margin-top: 3rem;
+            padding-top: 1.6rem;
+            border-top: 1px solid #dce2ec;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5c6f88;
+        }
+        .footer-links a {
+            color: #1e4d7a;
+            text-decoration: none;
+            font-weight: 450;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-links .sep {
+            margin: 0 0.6rem;
+            color: #b6c3d3;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e8ecf2;
+            margin: 2rem 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .card {
+                padding: 1rem 1.2rem;
+            }
+            .container {
+                padding: 1.5rem 0 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>db体育 · 简明指南</h1>
+        <p class="sub">访问前值得了解的信息汇总 —— 从站点定位到日常使用，帮你更快上手。</p>
+    </div>
+
+    <!-- 优势区：为什么值得了解 -->
+    <section>
+        <h2>几个核心特点</h2>
+        <div class="card-grid">
+            <div class="card">
+                <strong>结构清晰，分类直接</strong>
+                <p>赛事、数据、资讯以模块化方式排布，减少无关跳转。页面层级控制在三级以内，浏览体验更紧凑。</p>
+            </div>
+            <div class="card">
+                <strong>内容更新节奏稳定</strong>
+                <p>赛前数据、实时比分、赛后统计保持固定更新频率，方便用户追踪长期赛事或临时查阅。</p>
+            </div>
+            <div class="card">
+                <strong>多端适配，轻量加载</strong>
+                <p>页面经过基础响应式处理，在手机与平板上阅读体验一致。静态资源体积克制，加载速度较快。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区：实用场景与提示 -->
+    <section>
+        <h2>使用场景与说明</h2>
+        <p>以下列出几个常见的使用方向，以及对应的小建议：</p>
+        <ul style="margin: 0.8rem 0 0.8rem 1.6rem; line-height: 1.9;">
+            <li><strong>赛前信息参考</strong> —— 提前查看对阵、近期状态及历史交锋，注意数据更新可能存在数分钟延迟。</li>
+            <li><strong>实时比分追踪</strong> —— 页面默认提供主要赛事的即时比分，需手动刷新以获取最新动态。</li>
+            <li><strong>赛后数据回顾</strong> —— 完场后会补充详细统计（控球率、射门、角球等），适合复盘分析。</li>
+            <li><strong>多项目浏览</strong> —— 足球、篮球、网球等主流项目均有独立板块，可在导航区切换。</li>
+        </ul>
+        <div class="notice-box">
+            <p><strong>访问提醒</strong></p>
+            <p>部分赛事数据来源为第三方接口，页面会标注出处。如遇加载异常，可稍后重试或切换网络环境。</p>
+            <p style="margin-top: 0.3rem;">如果你正在寻找一个信息整理较规整的体育站点，<a href="https://ssl-dbsport.com" style="font-weight:500; color:#1a4b7a; text-decoration:underline;">db体育</a> 是一个值得尝试的选择。</p>
+        </div>
+    </section>
+
+    <!-- 从简明指南延伸的FAQ摘要 -->
+    <section>
+        <h2>常见疑问摘要</h2>
+        <div class="faq-item">
+            <div class="faq-q">▸ 是否需要注册才能查看内容？</div>
+            <div class="faq-a">大部分赛事数据和资讯可以直接浏览，无需登录账号。部分个性化功能（如收藏队伍）可能要求注册，但不会强制。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">▸ 移动端体验怎么样？</div>
+            <div class="faq-a">页面采用自适应布局，在手机浏览器上信息流自动纵向排列，导航折叠为菜单，操作基本流畅。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">▸ 数据来源可靠吗？</div>
+            <div class="faq-a">站点使用的数据综合自多家体育数据服务商，每一场比赛页面均会标注数据提供方。建议以官方最终结果为准。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">▸ 页面加载缓慢怎么办？</div>
+            <div class="faq-a">可以尝试关闭后台占用带宽的应用，或切换到 4G/5G 网络。若长时间无法打开，可留意站点公告。</div>
+        </div>
+    </section>
+
+    <!-- 额外补充：访问前的小贴士 -->
+    <hr>
+    <section style="margin-top: 1.5rem;">
+        <h3>访问前值得注意的两三事</h3>
+        <p>网站域名采用 ssl 加密链接，通信过程有基本安全保障。建议使用最新版浏览器，避免因证书或协议兼容问题导致页面异常。</p>
+        <p style="margin-top: 0.8rem;">另外，所有赛事数据仅供个人参考，不构成投注或决策依据。理性使用，保持判断。</p>
+    </section>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        <span>主页 ·</span>
+        <a href="https://ssl-dbsport.com">db体育</a>
+        <span class="sep">|</span>
+        <span>内容仅供参考</span>
+        <span class="sep">|</span>
+        <span>© 2025</span>
+    </div>
+
+</div>
+</body>
+</html>
